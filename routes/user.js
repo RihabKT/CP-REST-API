@@ -11,7 +11,7 @@ const router = express.Router()
 
 
 //ADD A NEW USER USING POST METHOD
-//API: localhost:5000/api/rihab/newuser
+//API: localhost:5000/api/rihab/newusers
 //TESTED VIA POSTMAN
 router.post("/", (req,res) =>{
     const newUser = new User ({...req.body})
@@ -41,7 +41,7 @@ const createUser = new User ({
 
 
 //RETURN ALL USERS USING GET METHOD
-//API: localhost:5000/api/rihab/newuser
+//API: localhost:5000/api/rihab/newusers
 //TESTED VIA POSTMAN
 router.get("/", (req,res) =>{
     User.find()
@@ -51,7 +51,7 @@ router.get("/", (req,res) =>{
 })
 
 //EDIT A USER BY ID USING PUT METHOD
-//API: localhost:5000/api/rihab/newuser
+//API: localhost:5000/api/rihab/newusers
 //TESTED VIA POSTMAN
 router.put("/:_id",(req,res) => {
     let {_id} = req.params
@@ -62,7 +62,7 @@ router.put("/:_id",(req,res) => {
 })
 
 //REMOVE A USER BY ID USING DELETE METHOD
-//API: localhost:5000/api/rihab/newuser
+//API: localhost:5000/api/rihab/newusers
 //TESTED VIA POSTMAN
 router.delete("/:_id",(req,res) => {
     let {_id} = req.params
